@@ -5,24 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Refinaldy Madras</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <main>
-    <img src="Foto.jpg" alt="Refinaldy" width="200px" class="rounded-circle">
-    <h1>Refinaldy Madras</h1>
-    <h2>Fullstack Web Developer</h2>
-    <a href="#" class="button">Hire Me</a>
-    <a href="#" class="button">Download CV</a>
+<body>
+  <header class="relative w-full h-32">
+    <form action="#">
+      <button type="submit" class="transition delay-150 duration-500 ease-in-out transform hover:scale-110 hover:bg-blue-500 hover:ring-gray-400 hover:text-white hover:border-white border-2 border-black mt-2 absolute top-0 right-5 mt-5 object-right-top rounded-lg h-10 px-4 focus:outline-none focus:ring focus:border-blue-200 " href="#">
+        Read My CV
+      </button>
+    </form>
+  </header>
+
+  <main class="container h-full">
+    <section class="flex flex-col justify-center items-center">
+      <figure class="flex items-center mb-5">
+        <img src="Foto.jpg" alt="Refinaldy" width="200px" class="flex items-center justify-center transform">
+      </figure>
+  
+      <h1 class="flex items-center text-black font-normal text-2xl">R e f i n a l d y &nbsp;M a d r a s</h1>
+      <h2 class="flex items-center text-gray-400 font-thin text-2xl">F u l l s t a c k &nbsp; W e b &nbsp; D e v e l o p e r</h2>
+      <button type="submit" class="mt-10 transition delay-150 duration-500 ease-in-out transform hover:scale-110 hover:bg-green-500 hover:ring-gray-400 hover:text-white hover:border-white border-2 border-black mt-2 rounded-lg h-10 px-4 focus:outline-none focus:ring focus:border-blue-200" href="#">
+        Hire me
+      </button>
+    </section>
+    
+    <section id="nav" class="flex flex-row justify-between px-40 absolute inset-x-0 bottom-24">
+      <a id="link-nav-1" href="#">Home</a>
+      <a id="link-nav-2" href="#">About</a>
+      <a id="link-nav-3" href="#">Portfolio</a>
+      <a id="link-nav-4" href="#">Blog</a>
+      <a id="link-nav-5" href="#">Contact me</a>
+    </section>
+   
   </main>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact Me</a>
-  </nav>
-  
+  <script>
+    for(let i=1; i<=5; i++){
+      console.log('link-nav-' + i);
+      document.getElementById('link-nav-' + i).setAttribute('class', "transition delay-400 duration-400 ease-in-out transform hover:scale-125 hover:font-normal hover:text-blue-700" )
+    }
+  </script>
 </body>
 </html>
